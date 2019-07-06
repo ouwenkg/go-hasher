@@ -2,7 +2,7 @@ package hasher
 
 import (
 	"fmt"
-    "github.com/ebfe/keccak"
+	"github.com/ebfe/keccak"
 )
 
 type Hasher interface {
@@ -13,9 +13,9 @@ type Sha3 struct {
 }
 
 func (sha3 Sha3) digest(data []byte) []byte {
-    hasher := keccak.New256()
-    sum := hasher.Sum(data)
-    fmt.Println("digest sha3...", sum)
+	hasher := keccak.New256()
+	sum := hasher.Sum(data)
+	fmt.Println("digest sha3...", sum)
 	return sum
 }
 
@@ -27,7 +27,7 @@ func (sha3 Sha3) digest(data []byte) []byte {
 
 // 	hasher = new(Blake2b)
 //     hasher.digest([]byte(""))
-    
+
 //     hasher = new(Sm3)
 //     hasher.digest([]byte(""))
 // }
