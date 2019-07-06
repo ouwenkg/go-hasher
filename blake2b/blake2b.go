@@ -1,4 +1,4 @@
-package hasher
+package blake2b
 
 import (
 	"fmt"
