@@ -8,7 +8,7 @@ import (
 type Blake2b struct {
 }
 
-func (b Blake2b) digest(data []byte) []byte {
+func (b Blake2b) Digest(data []byte) []byte {
 	hasher, _ := blake2b.New256([]byte("AsceticBear"))
 	sum := hasher.Sum(data)
 	fmt.Println("digest blake2b...", sum)
